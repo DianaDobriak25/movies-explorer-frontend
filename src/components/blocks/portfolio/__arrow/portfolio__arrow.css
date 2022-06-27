@@ -1,0 +1,27 @@
+.portfolio__arrow {
+    width: 29px;
+    height: 60px;
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+    font-family: 'Inter', serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .portfolio__arrow{
+        width: 27px;
+        font-size: 28px;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .portfolio__arrow{
+        width: 18px;
+        height: 28px;
+        font-size: 18px;
+    }
+  }
+

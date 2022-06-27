@@ -1,0 +1,14 @@
+.techs__project {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    margin: 0 0 23px 0;
+}
+
+@media screen and (max-width: 320px) {
+    .techs__container {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

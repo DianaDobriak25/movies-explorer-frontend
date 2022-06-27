@@ -1,0 +1,18 @@
+.about-me__block1 {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+    .about-me__block1 {
+        max-width: 348px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .about-me__block1 {
+        max-width: 292px;
+    }
+}

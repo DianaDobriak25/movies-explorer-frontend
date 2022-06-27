@@ -1,0 +1,17 @@
+.about-me__link {
+    font-family: 'Inter';
+    flex-direction: row;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    margin:0 20px 0 0;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+    .about-me__link {
+        margin:0 26px 0 0;
+    }
+}

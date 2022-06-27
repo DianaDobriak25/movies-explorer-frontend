@@ -1,0 +1,17 @@
+.about-project__technology {
+    font-family: 'Inter', serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin: 0 auto;
+    color: rgba(160, 160, 160, 1);
+}
+
+
+@media screen and (max-width: 320px) {
+    .about-project__technology {
+        font-family: "SuisseIntl-Regular";
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+    }
+}

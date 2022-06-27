@@ -1,0 +1,24 @@
+.techs__process {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    max-width: 460px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+    .techs__process{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .techs__process {
+        font-size: 11px;
+        line-height: 16px;
+        text-align: center;
+    }
+}

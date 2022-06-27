@@ -1,0 +1,11 @@
+.profile-form__link {
+    display: flex;
+    font-family: 'Inter', serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    justify-content: center;
+    color: rgba(255, 64, 98, 1);
+    text-decoration: none;
+    margin-top: 16px;
+}

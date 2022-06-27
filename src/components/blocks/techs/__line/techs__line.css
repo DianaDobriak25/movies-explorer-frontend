@@ -1,0 +1,12 @@
+.techs__line {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #000;
+    margin-top: 23px;
+}
+
+@media screen and (max-width: 320px) {
+    .techs__line {
+        margin-top: 28px;
+    }
+}

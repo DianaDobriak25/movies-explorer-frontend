@@ -1,0 +1,10 @@
+.profile-form__container {
+    width: 410px;
+    
+}
+
+@media screen and (max-width: 320px) {
+    .profile-form__container {
+        width: 260px;
+    }
+}

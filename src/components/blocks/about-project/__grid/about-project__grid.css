@@ -1,0 +1,23 @@
+.about-project__grid{
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 0 40px;
+    margin: 70px 0 110px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .about-project__grid {
+        grid-gap: 0 30px;
+        margin: 70px 0 93px;
+    }
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .about-project__grid {
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+    }
+}

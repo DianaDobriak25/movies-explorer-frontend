@@ -1,0 +1,16 @@
+.movies-card__appelation {
+    font-family: "Inter", serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+}
+
+@media screen and (max-width: 320px) {
+    .movies-card__appelation {
+        font-size: 12px;
+        line-height: 15px;
+    }
+}

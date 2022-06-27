@@ -1,0 +1,7 @@
+.error-modal__container {
+    display: flex;
+    max-width: calc(1280px - 140px);
+    height: 188px;
+    position: relative;
+    margin: 0 auto 0;
+}

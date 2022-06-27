@@ -1,0 +1,21 @@
+.portfolio__link {
+  font-family: 'Inter', serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__link {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio__link {
+    font-size: 18px;
+  }
+}

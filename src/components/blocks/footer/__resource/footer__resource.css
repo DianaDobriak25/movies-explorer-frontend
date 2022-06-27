@@ -1,0 +1,18 @@
+.footer__resource {
+    font-family: 'Inter', serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 20px;
+    display:flex;
+    flex-grow: 2;
+}
+
+@media screen and (max-width: 320px) {
+    .footer__resource {
+      color:  rgba(160, 160, 160, 1);
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 30px;
+    }
+  }

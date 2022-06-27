@@ -1,0 +1,22 @@
+.about-project__plan {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    padding-top: 110px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-project__plan {
+        padding-top: 90px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .about-project__plan {
+        padding-top: 0px;
+        font-family: Inter;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

@@ -1,0 +1,17 @@
+.profile-form__content {
+    width: 100%;
+    height: 437px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .profile-form__content {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .profile-form__content {
+        height: 452px;
+    }
+}

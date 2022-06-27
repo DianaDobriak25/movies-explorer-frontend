@@ -1,0 +1,11 @@
+.navigation {
+    width: 212px;
+    height: 18px;
+    top: 28px;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+}

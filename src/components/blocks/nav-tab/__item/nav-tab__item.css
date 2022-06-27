@@ -1,0 +1,22 @@
+.nav-tab__item {
+    line-height: 16px;
+    color: rgba(255, 255, 255, 1);
+    margin: 0 20px;
+    display: inline-block;
+    border-bottom: 1px solid white;
+    padding-bottom: 2px;
+    text-decoration: none;
+    font-family: "Inter", serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+
+
+}
+
+@media screen and (max-width: 320px) {
+    .nav-tab__item {
+        font-size: 11px;
+        margin: 0 20px auto;
+    }
+}

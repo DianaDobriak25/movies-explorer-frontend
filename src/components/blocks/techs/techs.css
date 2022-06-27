@@ -1,0 +1,10 @@
+.techs {
+    width: 100%;
+    background-color: rgba(245, 245, 245, 1);
+}
+
+@media screen and (max-width: 320px) {
+    .techs{
+        background-color: #FFFFFF;
+    }
+}

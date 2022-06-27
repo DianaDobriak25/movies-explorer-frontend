@@ -1,0 +1,34 @@
+.header__navigate-profile {
+    display: flex;
+    position: relative;
+    width: 100px;
+    height: 32px;
+    cursor: pointer;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    border-radius: 16px;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.header__navigate-profile:after {
+    display: block;
+    content: "";
+    position: absolute;
+    background: rgba(249, 249, 249, 1);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    right: 3px;
+    z-index: 1;
+}
+
+.header__navigate-profile:hover {
+    opacity: 5;
+}
+
+@media screen and (max-width: 768px) {
+    .header__navigate-profile {
+        display: none;
+    }
+}

@@ -1,0 +1,25 @@
+.search-form__input {
+    border: solid rgba(255, 255, 255, 1);
+    width: 1044px;
+    background-color: white;
+    font-family: 'Inter', serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    color: rgba(160, 160, 160, 1);
+    outline: none;
+}
+
+
+@media screen and (max-width: 320px) {
+    .search-form__input {
+        width: 246px;
+        font-family: 'Inter', serif;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: left;
+    }
+}
+
+
+

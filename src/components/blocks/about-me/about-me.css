@@ -1,0 +1,19 @@
+.about-me {
+  width: calc(1280px - 140px);
+  margin: 110px auto 101px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    max-width: calc(100% - 100px);
+    margin: 90px auto 90px;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .about-me {
+    max-width: calc(100% - 28px);
+    margin: 70px auto 70px;
+  }
+}

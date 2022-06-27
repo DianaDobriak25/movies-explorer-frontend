@@ -1,0 +1,19 @@
+.movies-card__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 29px;
+}
+
+@media screen and (max-width: 768px) {
+    .movies-card__block  {
+        width: 339px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .movies-card__block  {
+        width: 300px;
+    }
+}

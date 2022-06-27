@@ -1,0 +1,14 @@
+.about-project__subject {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 26px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .about-project__subject {
+        margin: 0 0 22px 0;
+    }
+}

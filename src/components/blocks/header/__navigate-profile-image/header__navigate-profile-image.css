@@ -1,0 +1,7 @@
+.header__navigate-profile-image {
+    position: relative;
+    margin: 0 11px 0 0;
+    width: 11px;
+    height: 11px;
+    z-index: 2;
+}
