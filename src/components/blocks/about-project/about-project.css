@@ -1,5 +1,5 @@
 .about-project {
-    width: calc(1280px - 140px);
+    max-width: calc(1280px - 140px);
     margin: 70px auto;
 }
 

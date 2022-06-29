@@ -1,5 +1,5 @@
 .portfolio {
-  width: calc(1280px - 140px);
+  max-width: calc(1280px - 140px);
   margin: 101px auto 226px;
 }
 
