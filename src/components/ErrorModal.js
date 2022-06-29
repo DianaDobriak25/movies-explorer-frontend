@@ -1,8 +1,8 @@
 import React from 'react';
 
-function ErrorModal() {
+function ErrorModal(props) {
     return (
-        <ErrorModal className="error-modal">
+        <ErrorModal className="error-modal" isOpen={props.isOpen}>
             <div className="error-modal__container">
             <h1 className="error-modal__title">404</h1>
             <p className="error-modal__resource">Страница не найдена</p>

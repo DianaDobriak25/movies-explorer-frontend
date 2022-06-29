@@ -11,7 +11,7 @@ import Footer from '../Footer';
 function Main() {
   return (
     <main className="main">
-    <Header loggedIn={true} />
+    <Header loggedIn={false} />
       <Promo />
       <NavTab />
       <AboutProject />
