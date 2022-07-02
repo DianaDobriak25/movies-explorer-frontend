@@ -1,9 +1,10 @@
 .about-me {
-  max-width: calc(1280px - 140px);
-  margin: 110px auto 101px;
+  max-width: calc(100% - 28px);
+  margin: 70px auto 70px;
+  padding-top: 70px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .about-me {
     max-width: calc(100% - 100px);
     margin: 90px auto 90px;
@@ -11,9 +12,9 @@
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1280px) {
   .about-me {
-    max-width: calc(100% - 28px);
-    margin: 70px auto 70px;
+    max-width: calc(1280px - 140px);
+    margin: 110px auto 101px;
   }
 }

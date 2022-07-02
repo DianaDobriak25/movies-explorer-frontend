@@ -11,7 +11,6 @@ function MoviesCardList() {
                     <MoviesCard key={i} />
                 )}
             </div>
-            <button className="movies-cards__more" type="button" >Eщё</button>
         </section>
     );
 }

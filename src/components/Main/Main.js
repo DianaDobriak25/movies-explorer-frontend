@@ -11,14 +11,14 @@ import Footer from '../Footer';
 function Main() {
   return (
     <main className="main">
-    <Header loggedIn={true} />
+      <Header />
       <Promo />
       <NavTab />
       <AboutProject />
       <Techs />
       <AboutMe />
       <Portfolio />
-      <Footer loggedIn={false}/>
+      <Footer loggedIn={false} />
     </main>
   );
 }

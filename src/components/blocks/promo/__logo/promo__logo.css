@@ -1,22 +1,21 @@
 .promo__logo {
-    width: 320px;
-    height: 320px;
-    margin: 82px auto 0;
+    width: 248px;
+    height: 248px;
+    margin: 142px auto 0;
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .promo__logo {
         margin: 224px auto 0;
+        width: 320px;
+        height: 320px;
     }
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1280px) {
     .promo__logo {
-        margin: 142px auto 0;
-        width: 248px;
-        height: 248px;
-        
+        margin: 82px auto 0;
     }
 }

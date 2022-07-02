@@ -1,5 +1,5 @@
 import React from 'react';
-import searchForm from '../../images/find.svg';
+import searchForm from '../../images/search.svg';
 
 function SearchForm() {
     const [checked, setChecked] = React.useState(true);

@@ -1,21 +1,21 @@
 .movies-card__image {
-    width: 270px;
-    height: 151px;
+    width: calc(100vw - 20px);
+    height: calc((100vw - 20px) * 0.56);
     object-fit: cover;
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .movies-card__image {
         width: 339px;
         height: 190px;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1280px) {
     .movies-card__image {
-        width: 300px;
-        height: 168px;
-        margin-bottom: 15px;
+        width: 270px;
+        height: 151px;
+        margin-bottom: 14px;
     }
 }

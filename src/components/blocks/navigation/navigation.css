@@ -1,11 +1,9 @@
 .navigation {
-    width: 212px;
-    height: 18px;
-    top: 28px;
+    display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .navigation {
-        display: none;
+        display: block;
     }
 }

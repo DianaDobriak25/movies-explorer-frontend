@@ -1,5 +1,5 @@
 import React from 'react';
-import promoLogo from '../../images/P_logo.png';
+import promoLogo from '../../images/P__logo.svg';
 
 
 

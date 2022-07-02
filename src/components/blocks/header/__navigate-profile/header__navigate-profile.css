@@ -26,9 +26,3 @@
 .header__navigate-profile:hover {
     opacity: 5;
 }
-
-@media screen and (max-width: 768px) {
-    .header__navigate-profile {
-        display: none;
-    }
-}

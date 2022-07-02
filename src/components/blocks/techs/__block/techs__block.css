@@ -1,18 +1,16 @@
 .techs__block {
     display: block;
-    margin-top: 90px;
+    margin-top: 60px;
 }
 
-@media screen and (max-width: 768px) {
-    .techs__block{
+@media screen and (min-width: 768px) {
+    .techs__block {
         margin-top: 80px;
-  
     }
 }
 
-@media screen and (max-width: 320px) {
-    .techs__block{
-        margin-top: 60px;
-  
+@media screen and (min-width: 1280px) {
+    .techs__block {
+        margin-top: 90px;
     }
 }
