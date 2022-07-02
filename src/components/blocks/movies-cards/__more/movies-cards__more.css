@@ -1,0 +1,32 @@
+.movies-cards__more {
+    display: flex;
+    width: 100%;
+    margin: 0px 0px 159px;
+    cursor: pointer;
+    border: none;
+    justify-content: center;
+    background: #F9F9F9;
+    border-radius: 6px;
+    color: black;
+    font-family: 'Inter', serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 11px;
+    padding-bottom: 9px;
+}
+
+.movies-cards__more:hover {
+    opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+    .movies-cards__more {
+        padding-bottom: 10px;
+        margin: 0 auto;
+        width: calc(100% - 20px);
+    }
+}

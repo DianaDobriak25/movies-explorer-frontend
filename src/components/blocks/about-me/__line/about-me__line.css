@@ -1,0 +1,13 @@
+.about-me__line {
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+    margin-top: 28px;
+}
+
+@media screen and (min-width: 768px) {
+    .about-me__line {
+        margin-top: 23px;
+    }
+  }
+  

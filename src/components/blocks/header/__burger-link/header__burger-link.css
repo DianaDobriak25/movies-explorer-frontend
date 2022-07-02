@@ -1,0 +1,15 @@
+.header__burger-link {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    margin: 0;
+}
+
+.header__burger-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+.header__navigate-saved-movies {
+    font-family: 'Inter', serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    text-decoration: none;
+    color:  rgba(0, 0, 0, 1);
+}

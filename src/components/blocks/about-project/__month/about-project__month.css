@@ -1,0 +1,21 @@
+.about-project__month {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 11px;
+    height: 35px;
+    background-color: rgba(242, 242, 242, 1);
+    color: rgba(0, 0, 0, 1);
+    line-height: 13px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .about-project__month {
+        font-size: 14px;
+        text-align: center;
+        height: 36px;
+    }
+}

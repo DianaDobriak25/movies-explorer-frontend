@@ -1,0 +1,18 @@
+.search-form {
+    width: calc(100% - 28px);
+    margin: 90px auto 0px;
+}
+
+@media screen and (min-width: 768px) {
+    .search-form {
+        width: calc(100% - 60px);
+        margin: 80px auto 61px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .search-form {
+        width: calc(100% - 140px);
+        margin: 70px auto 0px;
+    }
+}

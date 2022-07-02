@@ -1,0 +1,19 @@
+.header__burger {
+    display: none;
+    box-shadow: -200px 0px 1000px 50px rgba(0,0,0,.5);
+}
+
+@media screen and (max-width: 768px) {
+    .header__burger {
+        position: fixed;
+        width: 100vw;
+        max-width: 520px;
+        min-height: 100vh;
+        background-color: #fff;
+        top: 0px;
+        right: 100%;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,19 @@
+.movies-cards__grid {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 34px;
+}
+
+@media screen and (min-width: 768px) {
+    .movies-cards__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .movies-cards__grid {
+        gap: 34px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

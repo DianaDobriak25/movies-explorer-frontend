@@ -1,0 +1,18 @@
+.header__burger-btn {
+    display: none;
+    box-sizing: border-box;
+    padding: 12.5px 9px;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    width: 40px;
+    height: 43px;
+    background-color: transparent;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header__burger-btn {
+        display: flex;
+    }
+}

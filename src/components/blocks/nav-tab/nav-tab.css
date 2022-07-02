@@ -1,0 +1,15 @@
+.nav-tab {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 24px 0;
+}
+
+@media screen and (min-width: 768px) {
+    .nav-tab {
+        padding: 24px 0;
+    }
+}
