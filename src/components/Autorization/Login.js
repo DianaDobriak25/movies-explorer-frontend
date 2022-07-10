@@ -1,9 +1,9 @@
 import React from 'react';
 import FormAutorization from "./FormAutorization";
 
-function Login() {
+function Login(props) {
     return (
-        <FormAutorization title="Рады видеть!" subtitle="E-mail" subtitle1="Пароль" btnText="Войти" bottomText="Еще не зарегистрированы?" bottomLink="/sign-up" linkText="Регистрация" >
+        <FormAutorization title="Рады видеть!" subtitle="E-mail" subtitle1="Пароль" btnText="Войти" bottomText="Еще не зарегистрированы?" bottomLink="/sign-up" linkText="Регистрация" onSubmit={props.onLogin}>
         </FormAutorization>
     )
 }

@@ -5,11 +5,11 @@ function getResponseData(res) {
     return res.json();
 }
 
-export const BASE_URL = "http://localhost:3333";
+export const BASE_URL = "http://localhost:3333/api";
 
 //Параметры запроса для регистрации в нашем сервисе:
 export const register = (name, email, password) => {
-    return fetch(`${BASE_URL}/sign-up`, {
+    return fetch(`${BASE_URL}/signup`, {
         method: "POST",
         headers: {
             "Accept": "application/json",
@@ -22,7 +22,7 @@ export const register = (name, email, password) => {
 
 //Параметры запроса для авторизации в нашем сервисе.
 export const login = (email, password) => {
-    return fetch(`${BASE_URL}/sign-in`, {
+    return fetch(`${BASE_URL}/signin`, {
         method: "POST",
         headers: {
             "Accept": "application/json",
@@ -34,13 +34,26 @@ export const login = (email, password) => {
 }
 
 
-export const getUserInfo = (token) => {
-    return fetch(`${BASE_URL}/users/me`, {
+export const getUserInfo = ({ token, email, name }) => {
+    return fetch(`${BASE_URL}/users/me?email=${email}&name=${name}`, {
         method: "GET",
         headers: {
             "Accept": "application/json",
             "Authorization": `${token}`
         }
+    })
+        .then(res => getResponseData(res));
+}
+
+
+export const setUserInfo = ({ token, email, name }) => {
+    return fetch(`${BASE_URL}/users/me`, {
+        method: "PATCH",
+        headers: {
+            "Accept": "application/json",
+            "Authorization": `${token}`
+        },
+        body: JSON.stringify({ email, name })
     })
         .then(res => getResponseData(res));
 }

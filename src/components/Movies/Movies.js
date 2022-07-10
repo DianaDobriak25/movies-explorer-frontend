@@ -7,12 +7,12 @@ import SearchForm from './SearchForm';
 
 
 
-function Movies() {
+function Movies(props) {
   return (
     <main className="main">
     <Header loggedIn={true} />
-      <SearchForm />
-      <MoviesCardList />
+      <SearchForm onSearch={props.onSearch} />
+      <MoviesCardList movies={props.movies} />
       <Footer />
     </main>
   );
