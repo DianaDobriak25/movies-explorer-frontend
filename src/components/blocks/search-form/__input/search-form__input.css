@@ -1,22 +1,21 @@
 .search-form__input {
     border: solid rgba(255, 255, 255, 1);
-    width: 1044px;
+    width: 246px;
     background-color: white;
     font-family: 'Inter', serif;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 34px;
+    line-height: 22px;
     color: rgba(160, 160, 160, 1);
     outline: none;
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 768px) {
     .search-form__input {
-        width: 246px;
-        font-family: 'Inter', serif;
-        font-size: 18px;
-        line-height: 22px;
+        width: 1044px;
+        font-size: 28px;
+        line-height: 34px;
         text-align: left;
     }
 }

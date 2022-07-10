@@ -4,19 +4,20 @@
     justify-content: center;
     font-family: 'Inter', serif;
     font-weight: 400;
-    font-size: 14px;
-    height: 36px;
+    font-size: 11px;
+    height: 35px;
     background-color: black;
     color: white;
-    line-height: 17px;
+    line-height: 13px;
+    width: 100px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 768px) {
     .about-project__week {
-        font-size: 11px;
-        line-height: 13px;
+        font-size: 14px;
+        line-height: 17px;
         text-align: center;
-        height: 35px;
-        width: 100px;
+        height: 36px;
+        width: 100%;
     }
 }

@@ -121,6 +121,8 @@
 @import url(./components/blocks/movies-card/__like/_active/movies-card__like_active.css);
 @import url(./components/blocks/movies-card/__line/movies-card__line.css);
 @import url(./components/blocks/movies-card/__time/movies-card__time.css);
+@import url(./components/blocks/movies-card/__delete/movies-card__delete.css);
+@import url(./components/blocks/movies-card/__delete-image/movies-card__delete-image.css);
 @import url(./components/blocks/menu-item/menu-item.css);
 @import url(./components/blocks/menu-item/__burger/menu-item__burger.css);
 @import url(./components/blocks/footer/footer.css);

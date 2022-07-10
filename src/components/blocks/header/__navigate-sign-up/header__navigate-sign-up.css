@@ -1,15 +1,13 @@
 .header__navigate-sign-up {
     text-decoration: none;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     color: #000;
+    line-height: 16px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 768px) {
     .header__navigate-sign-up {
-        font-size: 10px;
-        font-weight: 500;
-        line-height: 16px;
-        
+        font-size: 12px;
     }
 }

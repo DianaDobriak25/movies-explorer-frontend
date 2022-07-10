@@ -1,10 +1,10 @@
 .about-me__links {
-    margin-top: auto;
+    margin-top: 40px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 768px) {
     .about-me__links {
-     margin-top: 40px;
+        margin-top: auto;
     }
 }
   

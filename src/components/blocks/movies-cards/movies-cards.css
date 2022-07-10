@@ -1,18 +1,19 @@
 .movies-cards {
-    width: calc(1280px - 140px);
-    margin: 174px auto 103px;
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .movies-cards {
         max-width: calc(100% - 60px);
-        margin: 70px auto 10px;
+        margin: 70px auto 14px;
     }
 }
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1280px) {
     .movies-cards {
-        max-width: calc(100% - 20px);
+        max-width: calc(100% - 140px);
+        margin: 174px auto 103px;
     }
 }

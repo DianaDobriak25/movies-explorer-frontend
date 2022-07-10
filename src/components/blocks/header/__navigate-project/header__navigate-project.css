@@ -2,20 +2,4 @@
     display: flex;
     cursor: pointer;
     justify-content: space-between;
-    margin: 18px 70px auto;
-}
-
-@media screen and (max-width: 768px) {
-    .header__navigate-project {
-        display: flex;
-    cursor: pointer;
-    justify-content: space-between;
-    margin: 18px 30px auto;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .header__navigate-project {
-        margin: 18px 14px auto;
-    }
 }

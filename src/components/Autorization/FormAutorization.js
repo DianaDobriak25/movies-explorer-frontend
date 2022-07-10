@@ -1,5 +1,5 @@
 import React from 'react';
-import formLogo from '../../images/logo__COLOR_main-1.png';
+import formLogo from '../../images/logo__COLOR_main-2.svg';
 import { Link } from 'react-router-dom';
 
 function FormAutorization(props) {

@@ -1,20 +1,18 @@
 .about-project {
-    width: calc(1280px - 140px);
+    max-width: calc(100% - 36px);
     margin: 70px auto;
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .about-project {
         max-width: calc(100% - 100px);
-        margin: 0 auto;
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1280px) {
     .about-project {
-        max-width: calc(100% - 36px);
-        margin: 70px auto;
+        max-width: calc(100% - 140px);
     }
 }
 

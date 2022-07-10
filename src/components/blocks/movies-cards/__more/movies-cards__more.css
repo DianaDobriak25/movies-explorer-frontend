@@ -1,7 +1,7 @@
 .movies-cards__more {
     display: flex;
-    margin: 0px 10px 0px;
     width: 100%;
+    margin: 0px 0px 159px;
     cursor: pointer;
     border: none;
     justify-content: center;
@@ -16,16 +16,17 @@
     text-align: center;
     box-sizing: border-box;
     padding-top: 11px;
-    padding-bottom: 10px;
+    padding-bottom: 9px;
 }
 
 .movies-cards__more:hover {
     opacity: 0.3;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 768px) {
     .movies-cards__more {
-        padding-bottom: 9px;
-        margin-bottom: 159px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        width: calc(100% - 20px);
     }
 }

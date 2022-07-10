@@ -1,20 +1,22 @@
 .search-form__short-films {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 33px auto 0px;
+    margin: 41px auto 91px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .search-form__short-films {
         margin: 30px auto 131px;
         flex-direction: row-reverse;
+        justify-content: right;
     }
   }
 
   
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 1280px) {
     .search-form__short-films {
-        margin: 41px auto 91px;
-        justify-content: center;
+        margin: 33px auto 0px;
+        justify-content: left;
     }
   }

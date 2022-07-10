@@ -1,5 +1,5 @@
 import React from 'react';
-import headerLogo from '../images/logo__COLOR_main-1.png';
+import headerLogo from '../images/logo__COLOR_main-2.svg';
 // импортируем useLocation для того, чтобы получить текущий url страницы
 import { Link, Routes, Route } from 'react-router-dom';
 import Navigation from './Navigation';

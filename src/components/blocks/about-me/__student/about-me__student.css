@@ -1,16 +1,14 @@
 .about-me__student {
   font-family: 'Inter', serif;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 18px;
+  line-height: 22px;
   margin: 0;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 768px) {
   .about-me__student {
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 22px;
+    line-height: 27px;
   }
 }
-
-
