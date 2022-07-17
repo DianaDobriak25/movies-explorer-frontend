@@ -1,4 +1,5 @@
 .about-me {
+  width: 100%;
   max-width: calc(100% - 28px);
   margin: 70px auto 70px;
   padding-top: 70px;

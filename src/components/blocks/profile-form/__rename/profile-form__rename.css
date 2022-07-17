@@ -1,18 +1,22 @@
 .profile-form__rename {
-    display: flex;
-    text-decoration: none;
-    color:  rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1);
     font-family: 'Inter', serif;
     font-size: 13px;
     font-weight: 400;
     line-height: 16px;
-    justify-content: center;
-    margin-top: 220px;
+    margin: 220px auto 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-form__rename:disabled {
+    color: rgba(0, 0, 0, .5);
 }
 
 
 @media screen and (max-width: 768px) {
     .profile-form__rename {
-         margin-top: 210px;
+        margin-top: 210px;
     }
 }

@@ -13,17 +13,14 @@ function SearchForm(props) {
         setChecked(parseData.checked);
     }, []);
 
-    function chengeCheckbox() {
+    function handleChengeCheckbox() {
         setChecked(!checked);
     }
 
-    //обработчик изменения поля "фильм".
     function handleSearchChange(evt) {
         setSearch(evt.target.value);
     }
 
-
-    //обработчик отправки данных поля "фильм".
     function handleMoviesSubmit(evt) {
         evt.preventDefault();
         props.onSearch({ search, checked });
@@ -41,7 +38,7 @@ function SearchForm(props) {
             <div className="search-form__line" />
             <div className="search-form__short-films">
                 <label className="search-form__checkbox">
-                    <input className='search-form__checkbox-input' type="checkbox" checked={checked} onChange={chengeCheckbox} />
+                    <input className='search-form__checkbox-input' type="checkbox" checked={checked} onChange={handleChengeCheckbox} />
                     <span className="search-form__checkbox-switch"></span>
                 </label>
                 <p className='search-form__short-films-title'>Короткометражки</p>

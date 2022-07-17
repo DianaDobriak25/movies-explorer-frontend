@@ -51,9 +51,48 @@ export const setUserInfo = ({ token, email, name }) => {
         method: "PATCH",
         headers: {
             "Accept": "application/json",
+            "Content-Type": "application/json",
             "Authorization": `${token}`
         },
         body: JSON.stringify({ email, name })
+    })
+        .then(res => getResponseData(res));
+}
+
+
+export const getSavedMovies = ({ token }) => {
+    return fetch(`${BASE_URL}/movies`, {
+        method: "GET",
+        headers: {
+            "Accept": "application/json",
+            "Authorization": `${token}`
+        }
+    })
+        .then(res => getResponseData(res));
+}
+
+
+export const likeMovie = ({ token, item }) => {
+    return fetch(`${BASE_URL}/movies`, {
+        method: "POST",
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": `${token}`
+        },
+        body: JSON.stringify(item)
+    })
+        .then(res => getResponseData(res));
+}
+
+
+export const dislikeMovie = ({ token, id }) => {
+    return fetch(`${BASE_URL}/movies/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Accept": "application/json",
+            "Authorization": `${token}`
+        },
     })
         .then(res => getResponseData(res));
 }

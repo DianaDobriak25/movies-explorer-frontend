@@ -8,17 +8,17 @@ import Portfolio from './Portfolio';
 import Header from '../Header';
 import Footer from '../Footer';
 
-function Main() {
+function Main(props) {
   return (
     <main className="main">
-      <Header loggedIn={false} />
+      <Header loggedIn={props.loggedIn} />
       <Promo />
       <NavTab />
       <AboutProject />
       <Techs />
       <AboutMe />
       <Portfolio />
-      <Footer loggedIn={false} />
+      <Footer />
     </main>
   );
 }

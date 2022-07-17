@@ -1,4 +1,5 @@
 .portfolio {
+  width: 100%;
   max-width: calc(100% - 28px);
   margin: 69px auto;
 }

@@ -10,3 +10,7 @@
     text-align: center;
     margin-top: 119px;
 }
+
+.form__button:disabled {
+    background-color: rgba(0, 0, 0, .5);
+}

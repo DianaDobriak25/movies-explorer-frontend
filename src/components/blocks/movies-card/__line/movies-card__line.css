@@ -1,18 +1,6 @@
 .movies-card__line {
-    width: 300px;
+    width: 100%;
     box-sizing: border-box;
     border-top: 1px solid #E8E8E8;
     margin-bottom: 6px;
-}
-
-@media screen and (min-width: 768px) {
-    .movies-card__line {
-        width: 339px;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .movies-card__line {
-        width: 100%;
-    }
 }

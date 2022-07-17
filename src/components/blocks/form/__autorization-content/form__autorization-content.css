@@ -3,5 +3,9 @@
     min-height: calc(100vh - 135px);
     display: flex;
     flex-direction: column;
-   
+}
+
+.form__autorization-content div {
+    font-size: 10px;
+    color: red;
 }

@@ -1,5 +1,5 @@
 .header__navigate-profile {
-    display: flex;
+    display: none;
     position: relative;
     width: 100px;
     height: 32px;
@@ -25,4 +25,10 @@
 
 .header__navigate-profile:hover {
     opacity: 5;
+}
+
+@media screen and (min-width: 768px) {
+    .header__navigate-profile {
+        display: flex;
+    }
 }

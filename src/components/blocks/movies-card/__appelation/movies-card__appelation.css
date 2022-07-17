@@ -1,4 +1,5 @@
 .movies-card__appelation {
+    max-width: calc(100% - 30px);
     font-family: "Inter", serif;
     font-size: 12px;
     font-weight: 500;

@@ -2,5 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 29px;
+    height: 44px;
+}
+
+@media screen and (min-width: 768px) {
+    .movies-card__block {
+        height: 45px;
+    }
 }
