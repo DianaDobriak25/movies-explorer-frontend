@@ -1,0 +1,10 @@
+.header__burger-footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+    height: 100px;
+}
+
+.header__burger-footer > .header__navigate-profile {
+    display: flex;
+}

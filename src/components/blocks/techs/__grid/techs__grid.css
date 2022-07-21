@@ -1,0 +1,24 @@
+.techs__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px auto 0;
+    grid-gap: 10px;
+    max-width: 174px;
+}
+
+@media screen and (min-width: 768px) {
+    .techs__grid {    
+        grid-template-columns: repeat(7, 1fr);
+        margin: 83px 0 0 0;
+        max-width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .techs__grid {
+        grid-template-columns: 9% 9% 9% 9% 9% 9% 9%;
+        justify-content: center;
+        margin-top: 100px auto 78px;
+    }
+}

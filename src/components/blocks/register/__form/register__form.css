@@ -1,0 +1,9 @@
+.register__form {
+    margin: 16px 0 auto;
+    color: rgba(160, 160, 160, 1);
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: center;
+}

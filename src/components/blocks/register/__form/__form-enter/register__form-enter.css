@@ -1,0 +1,9 @@
+.register__form-enter {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 1);
+    margin-left: 6px;
+}

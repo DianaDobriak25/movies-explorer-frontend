@@ -1,0 +1,34 @@
+@font-face { 
+  font-family: "Inter";
+  src: url("InterRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SuisseIntl-Regular";
+  src: url("SuisseIntl-Regular.ttf") format("truetype"); 
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face { 
+  font-family: "Inter";
+  src: url("InterSemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face { 
+  font-family: "Inter";
+  src:  url("InterBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face { 
+  font-family: "Inter";
+  src: url("inter-medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}

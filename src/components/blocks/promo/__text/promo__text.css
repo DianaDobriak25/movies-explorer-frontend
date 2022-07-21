@@ -1,0 +1,31 @@
+.promo__text {
+    font-family: "Inter", serif;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    font-weight: 400;
+    height: 117px;
+    text-align: center;
+    margin: 207px auto 0;
+    font-size: 31px;
+    line-height: 39px;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .promo__text {
+        font-size: 50px;
+        line-height: 58px;
+        margin: 326px auto 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .promo__text {
+        margin: 184px auto 0;
+        width: 730px;
+        height: 116px;
+    }
+}

@@ -1,0 +1,15 @@
+.movies-card__time {
+    font-family: 'Inter', serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: left;
+    color: rgba(160, 160, 160, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .movies-card__time {
+        font-size: 11px;
+        line-height: 13px;
+    }
+}

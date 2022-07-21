@@ -1,0 +1,5 @@
+.header__navigate-project {
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+}

@@ -1,0 +1,11 @@
+.footer__line {
+  box-sizing: border-box;
+  border-top: 1px solid rgba(232, 232, 232, 1);
+  margin-top: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__line {
+    margin-top: 20px;
+  }
+}

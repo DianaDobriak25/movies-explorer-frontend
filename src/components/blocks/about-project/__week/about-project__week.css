@@ -1,0 +1,23 @@
+.about-project__week {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    font-size: 11px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    line-height: 13px;
+    width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .about-project__week {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        height: 36px;
+        width: 100%;
+    }
+}

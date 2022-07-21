@@ -1,0 +1,24 @@
+.search-form__short-films-title {
+    font-family: 'Inter', serif;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    margin: 0 0 0 13px;
+    font-size: 11px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .search-form__short-films-title {
+        margin: 0 16px 0 0px;
+    }
+}
+
+
+
+@media screen and (min-width: 1280px) {
+    .search-form__short-films-title {
+        margin: 0 14px 0 0;
+        font-size: 13px;
+    }
+}

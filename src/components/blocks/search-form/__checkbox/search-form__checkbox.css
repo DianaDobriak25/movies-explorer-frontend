@@ -1,0 +1,14 @@
+.search-form__checkbox {
+    display: inline-block;
+    height: 28px;
+    line-height: 28px;
+    margin-top: 8px;
+    position: relative;
+    vertical-align: middle;
+    font-size: 14px;
+    user-select: none;
+}
+
+.search-form__checkbox.focused .search-form__checkbox-switch:before {
+	box-shadow: inset 0px 0px 4px #ff5623;
+}
