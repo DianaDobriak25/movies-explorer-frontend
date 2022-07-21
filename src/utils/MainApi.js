@@ -5,7 +5,7 @@ function getResponseData(res) {
     return res.json();
 }
 
-export const BASE_URL = "http://localhost:3333/api";
+export const BASE_URL = "https://api.testdomain12.site/api";
 
 //Параметры запроса для регистрации в нашем сервисе:
 export const register = (name, email, password) => {
