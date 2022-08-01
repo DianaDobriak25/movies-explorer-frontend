@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-self: center;
     width: 100%;
+    text-decoration: none;
 }
 
 .movies-card:hover .movies-card__delete {

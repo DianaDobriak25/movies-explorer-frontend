@@ -9,8 +9,8 @@ function MoviesCardList(props) {
                 ?
                 <>
                     <div className="movies-cards__grid">
-                        {props.movies.map((item, i) =>
-                            <MoviesCard key={i} item={item} onLikeMovie={props.onLikeMovie} onDislikeMovie={props.onDislikeMovie} isLiked={props.savedMovies.some(m => m.movieId === item.id)} />
+                        {props.movies.map((item) =>
+                            <MoviesCard key={item.id} item={item} onLikeMovie={props.onLikeMovie} onDislikeMovie={props.onDislikeMovie} isLiked={props.savedMovies.some(m => m.movieId === item.id)} />
                         )}
                     </div>
                     {props.showMore && <button className="movies-cards__more" type="button" onClick={props.onLoadMore}>Eщё</button>}

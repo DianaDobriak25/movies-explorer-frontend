@@ -4,7 +4,8 @@ import liked from '../../images/liked.svg';
 
 
 function MoviesCard(props) {
-    const handleLikeMovie = () => {
+    const handleLikeMovie = (evt) => {
+        evt.preventDefault();
         const payload = {
             country: props.item.country,
             director: props.item.director,
@@ -21,12 +22,13 @@ function MoviesCard(props) {
         props.onLikeMovie(payload);
     }
 
-    const handleDislikeMovie = () => {
+    const handleDislikeMovie = (evt) => {
+        evt.preventDefault();
         props.onDislikeMovie(props.item.id);
     }
 
     return (
-        <article className="movies-card">
+        <a href={props.item.trailerLink} target="_blank" className="movies-card">
             <img className="movies-card__image" src={`https://api.nomoreparties.co/${props.item.image.url}`} alt="Изображение фильма" />
             <div className="movies-card__block">
                 <h2 className="movies-card__appelation">{props.item.nameRU}</h2>
@@ -36,7 +38,7 @@ function MoviesCard(props) {
             </div>
             <div className="movies-card__line" />
             <p className="movies-card__time">{Math.trunc(props.item.duration / 60)}ч {('0' + (props.item.duration % 60)).slice(-2)}мин</p>
-        </article>
+        </a>
     );
 }
 

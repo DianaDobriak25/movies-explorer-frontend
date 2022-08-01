@@ -17,6 +17,7 @@ import NotFound from '../NotFound';
 function App() {
   const history = useNavigate();
 
+  let [loaded, setLoaded] = React.useState(false);
   let [currentUser, setCurrentUser] = React.useState({});
   let [loggedIn, setLoggedIn] = React.useState(false);
   let [showMovies, setShowMovies] = React.useState([]);
@@ -34,14 +35,17 @@ function App() {
   React.useEffect(() => {
     const jwt = localStorage.getItem('jwt');
     const user = localStorage.getItem('user');
-    if (!jwt || !user) return;
+    if (!jwt || !user) {
+      setLoaded(true);
+      return;
+    }
     getUserInfo({
       token: jwt,
       ...JSON.parse(user),
     }).then(data => {
       setCurrentUser(data);
       setLoggedIn(true);
-      history('/movies');
+      setLoaded(true);
     }).catch(err => {
       console.log(err);
     });
@@ -55,6 +59,12 @@ function App() {
       })
   }, []);
 
+  React.useEffect(() => {
+    if (loggedIn) {
+      history(window.location.pathname);
+    }
+  }, [loggedIn]);
+
 
   React.useEffect(() => {
     const startPageSize = window.innerWidth < 768
@@ -67,12 +77,13 @@ function App() {
       : window.innerWidth < 1280
         ? 2
         : 4;
+    const addPage = page - 1 + startPageSize / pageSize;
     if (page === 1) {
-      setShowMovies(s => [...paginate(filteredMovies, startPageSize, page)]);
+      setShowMovies(() => [...paginate(filteredMovies, startPageSize, page)]);
     } else {
-      setShowMovies(s => [...s, ...paginate(filteredMovies, pageSize, page)]);
+      setShowMovies(s => [...s, ...paginate(filteredMovies, pageSize, addPage)]);
     }
-    setShowMore(page !== Math.ceil(filteredMovies.length / pageSize));
+    setShowMore((addPage) < Math.ceil(filteredMovies.length / pageSize));
   }, [filteredMovies, page]);
 
 
@@ -89,6 +100,8 @@ function App() {
         setCurrentUser(data);
         setLoggedIn(true);
         history("/movies");
+      }).catch(err => {
+        console.error(err);
       });
     }).catch(err => {
       console.log(err);
@@ -128,8 +141,14 @@ function App() {
   const handleLoadMovies = () => {
     const fm = localStorage.getItem('filteredMovies');
     if (!fm) return;
+    const tPage = page;
     setPage(1);
     setFilteredMovies(JSON.parse(fm));
+    for (let i = 2; i <= tPage; i++) {
+      setTimeout(() => {
+        setPage(i);
+      }, 0)
+    }
   }
 
   function handleUpdateUser(data) {
@@ -170,6 +189,11 @@ function App() {
 
   const handleLogout = () => {
     localStorage.removeItem('jwt');
+    localStorage.removeItem('user');
+    localStorage.removeItem('filteredMovies');
+    localStorage.removeItem('searchData');
+    setFilteredMovies([]);
+    setSavedMovies([]);
     setLoggedIn(false);
     setCurrentUser({});
     history('/');
@@ -177,8 +201,7 @@ function App() {
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
-      <div className="page">
-        {/* В зависимости от роута будет или Main или Movies или SavedMovies */}
+      {loaded ? <div className="page">
         <Routes>
           <Route exact path="/" element={<Main loggedIn={loggedIn} />} />
           <Route exact path="/movies" element={<RequireAuth loggedIn={loggedIn}>
@@ -213,7 +236,7 @@ function App() {
           <Route path="/sign-in" element={<Login onLogin={handleLogin} />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-      </div>
+      </div> : ''}
     </CurrentUserContext.Provider>
   );
 }

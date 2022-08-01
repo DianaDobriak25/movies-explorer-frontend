@@ -11,10 +11,14 @@ function SearchForm(props) {
         const parseData = JSON.parse(searchData);
         setSearch(parseData.search);
         setChecked(parseData.checked);
+        console.log('checked: ', checked);
     }, []);
 
     function handleChengeCheckbox() {
-        setChecked(!checked);
+        const newChecked = !checked;
+        console.log("newChecked", newChecked);
+        setChecked(newChecked);
+        props.onSearch({ search, checked: newChecked });
     }
 
     function handleSearchChange(evt) {
