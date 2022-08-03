@@ -21,16 +21,25 @@ function App() {
   let [currentUser, setCurrentUser] = React.useState({});
   let [loggedIn, setLoggedIn] = React.useState(false);
   let [showMovies, setShowMovies] = React.useState([]);
+  let [movies, setMovies] = React.useState([]);
   let [filteredMovies, setFilteredMovies] = React.useState([]);
   let [page, setPage] = React.useState(1);
   let [showMore, setShowMore] = React.useState(true);
   let [movieRequestError, setMovieRequestError] = React.useState(false);
   let [isLoading, setIsLoading] = React.useState(false);
   let [savedMovies, setSavedMovies] = React.useState([]);
+  const [errorRequest, setErrorRequest] = React.useState('');
+  const [successRequest, setSuccessRequest] = React.useState('');
+  const [formLoading, setFormLoading] = React.useState(false);
 
   function paginate(array, page_size, page_number) {
     return array.slice((page_number - 1) * page_size, page_number * page_size);
   }
+
+  React.useEffect(() => {
+    setErrorRequest('');
+    setSuccessRequest('');
+  }, [history])
 
   React.useEffect(() => {
     const jwt = localStorage.getItem('jwt');
@@ -88,6 +97,8 @@ function App() {
 
 
   function handleLogin(params) {
+    setIsLoading(true);
+    setErrorRequest('');
     login(params.email, params.password).then(data => {
       localStorage.setItem('jwt', data.token);
       getUserInfo({
@@ -99,34 +110,44 @@ function App() {
         localStorage.setItem('user', JSON.stringify(data));
         setCurrentUser(data);
         setLoggedIn(true);
+        setIsLoading(false);
         history("/movies");
       }).catch(err => {
         console.error(err);
       });
     }).catch(err => {
+      setErrorRequest('Что-то пошло не так');
+      setIsLoading(false);
       console.log(err);
     })
   }
 
   function handleRegister(params) {
+    setIsLoading(true);
+    setErrorRequest('');
     register(params.name, params.email, params.password).then(data => {
       handleLogin(params);
     }).catch(err => {
+      setErrorRequest('Что-то пошло не так');
+      setIsLoading(false);
       console.log(err);
     });
+  }
+
+  const handleMovieShort = (searchData) => {
+    const fm = [...movies.filter(el => searchData.checked ? el.duration < 40 : true)];
+    localStorage.setItem('filteredMovies', JSON.stringify(fm));
+    setPage(1);
+    setFilteredMovies([...fm]);
   }
 
   const handleMovies = (searchData) => {
     setIsLoading(true);
     getMovies().then(data => {
       localStorage.setItem('searchData', JSON.stringify(searchData));
-      const fm = [...data.filter(el => el.nameRU.toLowerCase().includes(searchData.search.toLowerCase()) && (searchData.checked ? el.duration < 40 : true))];
-      localStorage.setItem('filteredMovies', JSON.stringify(fm));
-      setPage(1);
-      setFilteredMovies([...fm]);
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1000);
+      setMovies(data);
+      handleMovieShort(searchData);
+      setIsLoading(false);
     }).catch(err => {
       setIsLoading(false);
       setMovieRequestError(true);
@@ -152,6 +173,8 @@ function App() {
   }
 
   function handleUpdateUser(data) {
+    setIsLoading(true);
+    setErrorRequest('');
     const token = localStorage.getItem("jwt");
     setUserInfo({
       token,
@@ -159,7 +182,11 @@ function App() {
       email: data.email,
     }).then(data => {
       setCurrentUser(data.data);
+      setSuccessRequest('Данные пользователя успешно сохранены');
+      setIsLoading(false);
     }).catch(err => {
+      setErrorRequest('Что-то пошло не так');
+      setIsLoading(false);
       console.log(err);
     });
   }
@@ -209,6 +236,7 @@ function App() {
               loggedIn={loggedIn}
               movies={showMovies}
               onSearch={handleMovies}
+              onShort={handleMovieShort}
               onLoadMore={handleLoadMore}
               showMore={showMore}
               onLoadMovies={handleLoadMovies}
@@ -230,10 +258,13 @@ function App() {
             <Profile
               onUpdateUser={handleUpdateUser}
               onLogout={handleLogout}
+              success={successRequest}
+              error={errorRequest}
+              isLoading={isLoading}
             />
           </RequireAuth>} />
-          <Route path="/sign-up" element={<Register onRegister={handleRegister} />} />
-          <Route path="/sign-in" element={<Login onLogin={handleLogin} />} />
+          <Route path="/sign-up" element={<Register onRegister={handleRegister} error={errorRequest} isLoading={isLoading} />} />
+          <Route path="/sign-in" element={<Login onLogin={handleLogin} error={errorRequest} isLoading={isLoading} />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </div> : ''}

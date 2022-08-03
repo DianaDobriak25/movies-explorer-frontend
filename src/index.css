@@ -79,6 +79,7 @@
 @import url(./components/blocks/form/__autorization-subtitle/form__autorization-subtitle);
 @import url(./components/blocks/form/__autorization-input/form__autorization-input.css);
 @import url(./components/blocks/form/__button/form__button.css);
+@import url(./components/blocks/form/__error/form__error.css);
 @import url(./components/blocks/login/__form/login__form.css);
 @import url(./components/blocks/login/__form-enter/login__form-enter.css);
 @import url(./components/blocks/register/__form/register__form.css);
@@ -105,6 +106,7 @@
 @import url(./components/blocks/profile-form/__rename/profile-form__rename.css);
 @import url(./components/blocks/profile-form/__link/profile-form__link.css);
 @import url(./components/blocks/profile-form/__error/profile-form__error.css);
+@import url(./components/blocks/profile-form/__success/profile-form__success.css);
 @import url(./components/blocks/movies-cards/movies-cards.css);
 @import url(./components/blocks/movies-cards/__grid/movies-cards__grid.css);
 @import url(./components/blocks/movies-cards/__more/movies-cards__more.css);

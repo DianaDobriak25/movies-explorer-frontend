@@ -31,7 +31,7 @@ function Register(props) {
     }
 
     return (
-        <FormAutorization title="Добро пожаловать!" subtitle="Email" subtitle1="Пароль" btnText="Зарегистрироваться" bottomText="Уже зарегистрированы?" bottomLink="/sign-in" linkText="Войти" onSubmit={handleSubmit}>
+        <FormAutorization title="Добро пожаловать!" subtitle="Email" subtitle1="Пароль" btnText="Зарегистрироваться" bottomText="Уже зарегистрированы?" bottomLink="/sign-in" linkText="Войти" onSubmit={handleSubmit} error={props.error}>
             <p className="form__autorization-subtitle">Имя</p>
             <Input name="name" className="form__autorization-input" id="name" placeholder="Имя" value={name || ""} onChange={handleNameChange} validations={[valRequired, valName]} />
         </FormAutorization>

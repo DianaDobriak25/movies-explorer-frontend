@@ -36,6 +36,7 @@ function FormAutorization(props) {
     //обработчик отправки данных формы
     function handleSubmit(evt) {
         evt.preventDefault();
+        console.log(props);
         props.onSubmit({
             email,
             password
@@ -53,7 +54,8 @@ function FormAutorization(props) {
                     <Input name="email" className="form__autorization-input" id="email" placeholder="E-mail" value={email || ""} onChange={handleEmailChange} validations={[valRequired, valEmail]} />
                     <p className="form__autorization-subtitle">{props.subtitle1}</p>
                     <Input name="password" type="password" className="form__autorization-input" id="password" placeholder="Password" value={password || ""} onChange={handlePasswordChange} validations={[valRequired]} />
-                    <Button className="form__button" type="submit">{props.btnText}</Button>
+                    <p className='form__error'>{props.error}</p>
+                    <Button className="form__button" type="submit" disabled={props.isLoading}>{props.btnText}</Button>
                     <p className="login__form">{props.bottomText}
                         <Link className="login__form-enter" to={props.bottomLink} >{props.linkText}</Link>
                     </p>

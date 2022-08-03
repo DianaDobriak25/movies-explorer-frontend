@@ -15,7 +15,7 @@ const MyValidationInput = control(Input);
 
 const Button = ({ hasErrors, ...props }) => {
     return (
-        <button {...props} disabled={hasErrors || !props.changed} />
+        <button {...props} disabled={hasErrors || !props.changed || props.disable} />
     );
 };
 const MyValidationButton = button(Button);
@@ -88,7 +88,8 @@ function Profile(props) {
                             <label className='profile-form__label'>E-mail</label>
                             <MyValidationInput name="email" className="profile-form__input" id="email" value={email || ""} onChange={handleEmailChange} validations={[valRequired, valEmail]} />
                         </div>
-                        <MyValidationButton className="profile-form__rename" type="submit" changed={currentUser.name !== name || currentUser.email !== email}>Редактировать</MyValidationButton>
+                        <p className='profile-form__success'>{props.success}</p>
+                        <MyValidationButton className="profile-form__rename" type="submit" disable={props.isLoading} changed={currentUser.name !== name || currentUser.email !== email}>Редактировать</MyValidationButton>
                         <a href="/ " className="profile-form__link" onClick={handleLogout} >Выйти из аккаунта</a>
                     </div>
                 </Form>

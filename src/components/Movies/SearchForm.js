@@ -16,9 +16,8 @@ function SearchForm(props) {
 
     function handleChengeCheckbox() {
         const newChecked = !checked;
-        console.log("newChecked", newChecked);
         setChecked(newChecked);
-        props.onSearch({ search, checked: newChecked });
+        props.onShort({ search, checked: newChecked });
     }
 
     function handleSearchChange(evt) {

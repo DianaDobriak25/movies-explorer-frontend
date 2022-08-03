@@ -14,7 +14,7 @@ function Movies(props) {
   return (
     <main className="main">
       <Header loggedIn={props.loggedIn} />
-      <SearchForm onSearch={props.onSearch} />
+      <SearchForm onSearch={props.onSearch} onShort={props.onShort} />
       {
         props.isLoading
           ? <Preloader />
