@@ -30,7 +30,6 @@ function App() {
   let [savedMovies, setSavedMovies] = React.useState([]);
   const [errorRequest, setErrorRequest] = React.useState('');
   const [successRequest, setSuccessRequest] = React.useState('');
-  const [formLoading, setFormLoading] = React.useState(false);
 
   function paginate(array, page_size, page_number) {
     return array.slice((page_number - 1) * page_size, page_number * page_size);
