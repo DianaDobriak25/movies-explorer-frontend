@@ -1,0 +1,11 @@
+.profile-form__input {
+    border: none;
+    flex-grow: 3;
+    font-family: 'Inter', serif;
+    font-size: 11px;
+    line-height: 13px;
+    outline: none;
+    background-color:  white;
+    color: black;
+    text-align: right;
+}

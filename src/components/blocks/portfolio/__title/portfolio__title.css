@@ -1,0 +1,21 @@
+.portfolio__title {
+  font-family: 'Inter', serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 50px;
+  color: rgba(160, 160, 160, 1);
+  margin-bottom: 50px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .portfolio__title {
+    line-height: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .portfolio__title {
+    font-size: 18px;
+  }
+}

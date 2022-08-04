@@ -1,0 +1,21 @@
+.movies-cards {
+    width: 100%;
+    max-width: calc(100% - 20px);
+    margin: 0 auto;
+    flex-grow: 2;
+}
+
+@media screen and (min-width: 768px) {
+    .movies-cards {
+        max-width: calc(100% - 60px);
+        margin: 70px auto 14px;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .movies-cards {
+        max-width: calc(100% - 140px);
+        margin: 174px auto 103px;
+    }
+}

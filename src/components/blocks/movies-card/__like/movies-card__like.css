@@ -1,0 +1,16 @@
+.movies-card__like {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px #F9F9F9;
+    margin-left: -10px;
+}
+
+.movies-card__like:hover {
+    box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+

@@ -1,0 +1,21 @@
+.techs__container {
+    box-sizing: border-box;
+    margin: 0px auto;
+    padding: 70px 0;
+    max-width: calc(100% - 36px);
+}
+
+@media screen and (min-width: 768px) {
+    .techs__container {
+        max-width: calc(100% - 100px);
+        padding: 90px 0;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .techs__container {
+        max-width: calc(100% - 140px);
+        padding: 100px 0;
+    }
+}

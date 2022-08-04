@@ -1,0 +1,16 @@
+.form__autorization-input {
+    border: none;
+    width: 100%;
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+    font-family: 'Inter', serif;
+    font-size: 13px;
+    line-height: 17px;
+    outline: none;
+    background-color: rgba(249, 249, 249, 1);
+    color: rgba(0, 0, 0, 1);
+}
+
+.form__autorization-input::placeholder {
+    transform: translateY(-20px);
+}
